@@ -1,18 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { heroBackgrounds } from '../assets/images';
+import { CURRENT_HERO_BACKGROUND } from '../assets/images';
 
 const Hero = () => {
-  // Test image URL directly
-  const backgroundImage = "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
-  
   return (
-  <section className="relative h-screen flex items-center justify-center overflow-hidden">
+  <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
     {/* Restaurant Background Image */}
     <div 
       className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
       style={{
-        backgroundImage: `url(${backgroundImage})`,
+        backgroundImage: `url(${CURRENT_HERO_BACKGROUND})`,
       }}
     ></div>
     
@@ -22,8 +19,8 @@ const Hero = () => {
     {/* Additional amber overlay for premium feel */}
     <div className="absolute inset-0 bg-gradient-to-r from-amber-900/20 via-transparent to-amber-800/25"></div>
     
-    {/* Main Content */}
-    <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+    {/* Main Content - with proper spacing from fixed header */}
+    <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-20">
       {/* Premium Badge */}
       <div className="inline-flex items-center px-4 py-2 bg-amber-600/20 backdrop-blur-sm border border-amber-400/30 rounded-full text-amber-200 text-sm font-medium mb-6">
         <span className="w-2 h-2 bg-amber-400 rounded-full mr-2"></span>

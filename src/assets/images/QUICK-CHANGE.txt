@@ -1,0 +1,35 @@
+🎯 SUPER QUICK BACKGROUND CHANGE - BHOOTHNATH RESTAURANT
+=======================================================
+
+# बस 1 Line Change करो!
+
+**File:** `background-config.js`
+**Line:** `export const SELECTED_BACKGROUND = "main";`
+
+## Available Options:
+- "main" - Current elegant restaurant
+- "alt1" - Modern dining space  
+- "alt2" - Cozy atmosphere
+- "traditional" - Indian style
+- "elegant" - Fine dining
+
+## Steps:
+1. Open `background-config.js`
+2. Change "main" to any option above
+3. Save file
+4. Background changes instantly! ✨
+
+## Add Your Own:
+1. Add your image URL in `index.js` → `heroBackgrounds` object
+2. Use that name in `background-config.js`
+
+## Example:
+```javascript
+// In index.js
+bhoothnath: "your-image-url-here",
+
+// In background-config.js  
+export const SELECTED_BACKGROUND = "bhoothnath";
+```
+
+**That's it! Super easy! 🚀**

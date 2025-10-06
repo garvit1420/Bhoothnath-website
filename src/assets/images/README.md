@@ -1,39 +1,54 @@
 # Bhoothnath Restaurant Images
 
-## How to Change the Hero Background Image
+## 🎯 How to Change Hero Background Image (SUPER EASY!)
 
-### Method 1: Replace with your own image file
-1. Add your Bhoothnath restaurant image to this folder (`src/assets/images/`)
-2. Name it something like `bhoothnath-restaurant.jpg` or `hero-bg.jpg`
-3. Open `index.js` in this folder
-4. Update the `main` property in `heroBackgrounds` to import your local image:
+### ⚡ Quick Change Method:
+**Open `index.js` file in this folder and change this single line:**
 
 ```javascript
-// Instead of URL, use local import
-import bhoothnathImage from './bhoothnath-restaurant.jpg';
-
-export const heroBackgrounds = {
-  main: bhoothnathImage,
-  // ... rest of the code
-};
+// Line 18 - Change this to switch background instantly
+export const CURRENT_HERO_BACKGROUND = heroBackgrounds.main;
 ```
 
-### Method 2: Change the image URL
-1. Open `index.js` in this folder
-2. Replace the URL in `heroBackgrounds.main` with your new image URL
-3. The image will automatically update in the Hero section
+**Change to any of these options:**
+```javascript
+export const CURRENT_HERO_BACKGROUND = heroBackgrounds.main;        // Current restaurant
+export const CURRENT_HERO_BACKGROUND = heroBackgrounds.alt1;        // Alternative 1
+export const CURRENT_HERO_BACKGROUND = heroBackgrounds.alt2;        // Alternative 2  
+export const CURRENT_HERO_BACKGROUND = heroBackgrounds.traditional; // Traditional Indian
+export const CURRENT_HERO_BACKGROUND = heroBackgrounds.elegant;     // Elegant dining
+```
 
-### Current Images:
-- **Main Hero Background**: Restaurant interior with elegant ambiance
-- **Alternative Options**: Available in the `heroBackgrounds` object
+### 🔥 Add Your Own Image:
 
-### Image Requirements:
-- **Recommended Size**: 1920x1080 or higher
-- **Format**: JPG, PNG, or WebP
-- **Aspect Ratio**: 16:9 (landscape)
-- **Quality**: High resolution for crisp display
+**Method 1: Add URL**
+```javascript
+// Add your image URL to heroBackgrounds object
+bhoothnath: "YOUR_BHOOTHNATH_RESTAURANT_IMAGE_URL_HERE",
 
-### Tips:
-- Choose images with good contrast areas for text overlay
-- Darker images work better with the current amber text styling
-- Restaurant interior or food images create the best atmosphere
+// Then use it
+export const CURRENT_HERO_BACKGROUND = heroBackgrounds.bhoothnath;
+```
+
+**Method 2: Local Image File**
+1. Put your image in this folder: `src/assets/images/bhoothnath-bg.jpg`
+2. Import it in `index.js`:
+```javascript
+import bhoothnathImage from './bhoothnath-bg.jpg';
+export const CURRENT_HERO_BACKGROUND = bhoothnathImage;
+```
+
+### 📸 Image Requirements:
+- **Size**: 1920x1080 or higher
+- **Format**: JPG, PNG, WebP
+- **Style**: Restaurant interiors work best
+- **Lighting**: Darker images show text better
+
+### 🎨 Current Available Images:
+- **main**: Elegant restaurant interior
+- **alt1**: Modern dining space  
+- **alt2**: Cozy restaurant atmosphere
+- **traditional**: Indian restaurant style
+- **elegant**: Fine dining setting
+
+**Just change ONE line in `index.js` and your background changes instantly!** 🚀

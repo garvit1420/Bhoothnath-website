@@ -26,7 +26,7 @@ function App() {
         e.preventDefault();
         const element = document.querySelector(target);
         if (element) {
-          const headerHeight = 80; // Adjust based on your header height
+          const headerHeight = 90; // Adjusted for fixed header height
           const elementPosition = element.offsetTop - headerHeight;
           window.scrollTo({
             top: elementPosition,
