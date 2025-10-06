@@ -1,13 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { heroBackgrounds } from '../assets/images';
 
-const Hero = () => (
-  <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-gray-900 to-black">
-    {/* Elegant Background Pattern */}
-    <div className="absolute inset-0" style={{
-      backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-    }}></div>
-    <div className="absolute inset-0 bg-gradient-to-r from-amber-900/10 via-transparent to-amber-800/15"></div>
+const Hero = () => {
+  // Test image URL directly
+  const backgroundImage = "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+  
+  return (
+  <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    {/* Restaurant Background Image */}
+    <div 
+      className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+      }}
+    ></div>
+    
+    {/* Dark overlay for better text readability */}
+    <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-slate-900/80 to-black/70"></div>
+    
+    {/* Additional amber overlay for premium feel */}
+    <div className="absolute inset-0 bg-gradient-to-r from-amber-900/20 via-transparent to-amber-800/25"></div>
     
     {/* Main Content */}
     <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
@@ -78,6 +91,7 @@ const Hero = () => (
     <div className="absolute bottom-20 right-10 text-amber-400/20 text-4xl animate-pulse delay-1000">❋</div>
     <div className="absolute top-1/2 left-20 text-amber-400/10 text-8xl animate-pulse delay-500">◆</div>
   </section>
-);
+  );
+};
 
 export default Hero;
